@@ -1,0 +1,5 @@
+$kind: http-request
+description: "Tests validation for malformed MongoDB ObjectId (Expected: 400 Bad Request)"
+url: "{{baseUrl}}/api/users/invalid-id-format"
+method: GET
+order: 9000

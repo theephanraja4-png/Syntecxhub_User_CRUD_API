@@ -1,0 +1,25 @@
+$kind: http-request
+description: "Creates a new user record. Saves the created user ID into {{userId}} variable (Expected: 201 Created)"
+url: "{{baseUrl}}/api/users"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "age": 21
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      if (pm.response.code === 201) {
+          var jsonData = pm.response.json();
+          if (jsonData.data && jsonData.data._id) {
+              pm.collectionVariables.set('userId', jsonData.data._id);
+          }
+      }
+    language: text/javascript
+order: 2000

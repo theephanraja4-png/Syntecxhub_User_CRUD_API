@@ -1,0 +1,15 @@
+$kind: http-request
+description: "Updates fields on the specified user (Expected: 200 OK)"
+url: "{{baseUrl}}/api/users/{{userId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "John Doe Updated",
+      "email": "john.updated@example.com",
+      "age": 22
+    }
+order: 5000

@@ -1,0 +1,5 @@
+$kind: collection
+description: Postman Collection for Syntecxhub Backend Development Internship Week 1 - User CRUD REST API
+variables:
+  baseUrl: http://localhost:5000
+  userId: ""

@@ -1,0 +1,5 @@
+$kind: http-request
+description: "Tests 404 response when querying a valid ObjectId that does not exist in DB (Expected: 404 Not Found)"
+url: "{{baseUrl}}/api/users/650000000000000000000000"
+method: GET
+order: 10000

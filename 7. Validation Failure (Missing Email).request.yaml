@@ -1,0 +1,14 @@
+$kind: http-request
+description: "Tests validation error when required field 'email' is missing (Expected: 400 Bad Request)"
+url: "{{baseUrl}}/api/users"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Invalid User",
+      "age": 25
+    }
+order: 7000

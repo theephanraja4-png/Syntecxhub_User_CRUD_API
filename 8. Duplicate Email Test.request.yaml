@@ -1,0 +1,15 @@
+$kind: http-request
+description: "Tests conflict error when attempting to register an already existing email (Expected: 409 Conflict)"
+url: "{{baseUrl}}/api/users"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Duplicate User",
+      "email": "john@example.com",
+      "age": 30
+    }
+order: 8000

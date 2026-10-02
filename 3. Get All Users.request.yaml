@@ -1,0 +1,5 @@
+$kind: http-request
+description: "Retrieves all users stored in MongoDB (Expected: 200 OK)"
+url: "{{baseUrl}}/api/users"
+method: GET
+order: 3000
